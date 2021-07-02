@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TusharDbModelStoreContainer" CdmEntityContainer="TusharDbEntities">
+    <EntitySetMapping Name="demo_tushar">
+      <EntityTypeMapping TypeName="TusharDbModel.demo_tushar">
+        <MappingFragment StoreEntitySet="demo_tushar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="message_1" ColumnName="message_1" />
+          <ScalarProperty Name="message_2" ColumnName="message_2" />
+          <ScalarProperty Name="message_3" ColumnName="message_3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

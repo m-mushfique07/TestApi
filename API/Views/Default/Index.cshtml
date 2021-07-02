@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <style>
+        .firstDiv{
+            background-color: green;
+            padding: 100px 0px 100px
+        }
+        h3, h4, h5{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="firstDiv">
+        <h3 id="firstMessage"></h3>
+        <h4 id="secondMessage"></h4>
+        <h5 id="thirdMessage"></h5>
+    </div>
+    
+</body>
+
+
+</html>
+<script>
+    $(document).ready(function () {
+        debugger;
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:44356/api/Values",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+
+                $("#firstMessage").append(result[0].message_1);
+                $("#secondMessage").append(result[0].message_2);
+                $("#thirdMessage").append(result[0].message_3);
+
+            }
+        });
+    });
+</script>

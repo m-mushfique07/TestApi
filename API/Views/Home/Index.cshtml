@@ -1,0 +1,25 @@
+﻿
+
+<div class="firstDiv">
+    <h3 id="firstMessage"></h3>
+</div>
+<div class="secondDiv">
+    <h4 id="secondMessage"></h4><br />
+    <h5 id="thirdMessage"></h5>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        debugger;
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:44356/api/Values",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var data = result;
+            }
+        });
+    });
+</script>
