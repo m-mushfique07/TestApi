@@ -14,5 +14,10 @@ namespace API.Controllers
 
             return View();
         }
+
+        public ActionResult GetAllValue()
+        {
+            ViewBag.Message = "Welcome to Git and Git Hub";
+        }
     }
 }
